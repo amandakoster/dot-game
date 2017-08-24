@@ -1,12 +1,16 @@
-import React from {react}
-import ReactDom from 'react-dom'
+import React from 'react';
+import ReactDom from 'react-dom';
 
+import Slider from '../'
 
-render() {
-  return
-  <main className='app'>
-  <h1> Dot game </h1>
-  </main>
+class AppContainer extends React.Component {
+  render() {
+    return(
+      <div>
+      <h1> hello </h1>
+      </div>
+    );
+  }
 }
 
-ReactDom.render(App/>. document.getElementById('root'));
+ReactDom.render(<AppContainer />, document.getElementById('root'))
