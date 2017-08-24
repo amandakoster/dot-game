@@ -1,12 +1,14 @@
-import React from {react}
-import ReactDom from 'react-dom'
+import React from 'react';
+import ReactDom from 'react-dom';
 
-
-render() {
-  return
-  <main className='app'>
-  <h1> Dot game </h1>
-  </main>
+class App extends React.Component {
+  render() {
+    return(
+      <div>
+      <h1> hello </h1>
+      </div>
+    );
+  }
 }
 
-ReactDom.render(App/>. document.getElementById('root'));
+ReactDom.render(<App />, document.getElementById('root'))
