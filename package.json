@@ -1,0 +1,11 @@
+{
+  "name": "dot-game",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/amandakoster/dot-game.git",
+  "author": "Amanda Koster <‘amandakoster@gmail.com’>",
+  "license": "MIT",
+  "dependencies": {
+    "babel": "^6.23.0"
+  }
+}
