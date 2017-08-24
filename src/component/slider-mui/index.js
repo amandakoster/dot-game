@@ -1,12 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import Slider from 'material-ui/Slider';
 
-import React from 'react';
-import RaisedButton from 'material-ui/RaisedButton';
+class SliderMui extends React.Component{
+render(){
+  return(
 
-const MyAwesomeReactComponent = () => (
-  <RaisedButton label="Default" />
-);
+      <div className='slider'>
+        <MuiThemeProvider>
+        <Slider />
+        <Slider defaultValue={0.5} />
+        <Slider defaultValue={1} />
+      </MuiThemeProvider>
+      </div>
 
-export default MyAwesomeReactComponent;
+      )
+      }
+  }
+
+export default SliderMui;
