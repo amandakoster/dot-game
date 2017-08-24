@@ -1,12 +1,29 @@
+import './_slider.scss'
 import React from 'react';
 import ReactDOM from 'react-dom';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import Slider from 'material-ui/Slider';
 
-import React from 'react';
-import RaisedButton from 'material-ui/RaisedButton';
+// handleChange = (slider, value) => {
+//   const newState = {};
+//   newState[slider] = value;
+//   this.setState(newState);
+// };
 
-const MyAwesomeReactComponent = () => (
-  <RaisedButton label="Default" />
-);
+class SliderMui extends React.Component{
+render(){
+  return(
 
-export default MyAwesomeReactComponent;
+      <div >
+        <MuiThemeProvider>
+        <Slider
+
+        defaultValue={0.5}
+        />
+      </MuiThemeProvider>
+      </div>
+
+      )
+      }
+  }
+
+export default SliderMui;
