@@ -4,6 +4,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 
 import App from './component/app'
+import './style/style.scss'
 
 class AppContainer extends React.Component {
 

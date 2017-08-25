@@ -8,6 +8,7 @@ constructor(props){
         minValue: 0,
         maxValue: 100,
         firstValue: null,
+        secondValue: null,
     };
 }
 

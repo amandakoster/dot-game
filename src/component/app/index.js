@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Slider from '../slider'
-import SliderTwo from '../slider-two'
-import '../dot/_dot.scss'
+import Slider from '../slider';
+import SliderTwo from '../slider-two';
+import Button from '../button';
+import '../dot/_dot.scss';
 
 
 
@@ -13,13 +14,13 @@ class App extends React.Component{
     return (
 
       <div className='app'>
-      <Slider />
-      <button>button</button>
+        <Slider />
+
+        <Button />
       </div>
 
-    )
+    );
   }
 }
 
-
-export default App
+export default App;
