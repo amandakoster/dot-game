@@ -1,22 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import lightBaseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import Slider from '../slider'
+import '../dot/_dot.scss'
+
 
 
 console.log('HIT APP');
 
 class App extends React.Component{
-  render() {
+  render(){
     return (
-      <div>
-<p> HIT APP </p>
-        <div> {Slider} </div>
 
+      <div className='app'>
+      <Slider />
+      <button>button</button>
       </div>
+
     )
   }
 }
+
 
 export default App
