@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Slider from '../slider'
+import SliderTwo from '../slider-two'
 import '../dot/_dot.scss'
 
 

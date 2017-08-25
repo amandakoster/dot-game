@@ -1,16 +1,18 @@
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/range
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './_slider.scss'
 
 class Slider extends React.Component {
   constructor() {
-    super();
+    super()
     this.state = { value : 25 };
   }
 
   getInitialState() {
     return {
-      value: 25
+      value: 0
     };
   }
 
@@ -20,7 +22,7 @@ class Slider extends React.Component {
 
   render() {
     return (
-      <div className="slider-input">
+      <div className="a">
         <input
           ref="range"
           type="range"
@@ -61,8 +63,8 @@ class SliderValue extends React.Component {
     this.getPercentage();
     this.getStyle();
     return (
-      <div className="bar">
-        <p className="percentage">{ this.percentage } </p>
+      <div className="slider-div">
+        <p className="bar">{ this.percentage } </p>
         <div style={{ width: this.percentage + "%" }} className= { "fill "+ this.style }></div>
       </div>
     );
