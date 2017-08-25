@@ -1,0 +1,39 @@
+.slider-input {
+  width: 50%;
+}
+
+  .bar {
+  height: 30px;
+  width: 100%;
+  padding-left: 5px;
+  padding-right: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.fill {
+  height: 30px;
+  width: 50%;
+  transition: background-color 1s ease;
+}
+
+.fill.fast {
+  background-color: #4CAF50;
+}
+
+.fill.med {
+  background-color: #FF9800;
+}
+
+.fill.slow {
+  background-color: #F44336;
+}
+
+.percentage {
+  position: absolute;
+  margin: 0;
+  margin-left: 2px;
+  font-family: sans;
+  font-size: 0.8em;
+}

@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDom from 'react-dom';
-import Slider from 'material-ui/Slider';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 
@@ -12,8 +11,7 @@ class AppContainer extends React.Component {
     return(
       <div>
       <MuiThemeProvider>
-
-      <Slider />
+      <App />
       </MuiThemeProvider>
       </div>
     );
