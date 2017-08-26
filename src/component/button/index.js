@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './_button.scss';
 
-console.log('HIT APP');
+console.log('BUTTON');
 
 let renderIf = (test, component) => test ? component : undefined;
 

@@ -3,7 +3,9 @@ import ReactDOM from 'react-dom';
 import Slider from '../slider';
 import SliderTwo from '../slider-two';
 import Button from '../button';
-import '../dot/_dot.scss';
+// import '../style/main.scss';
+import '../button/_button.scss';
+
 
 
 
