@@ -27,6 +27,9 @@ class Button extends React.Component{
         <p onClick={this.handleClick}>{this.props.item}</p>
         {renderIf(this.state.show === true,
           <button className="button-remove" onClick={() => this.setState({show: false})}>click</button>)}
+        <div className="move-me move-me-1">1</div>
+        <div className="move-me move-me-2">2</div>
+        <div className="move-me move-me-3">3</div>
       </div>
 
     );
