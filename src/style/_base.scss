@@ -8,10 +8,30 @@ em { font-style: italic; }
 strong { font-weight: bold; }
 
 body {
-  background: $color-white;
-  font-size: 20px;
-  margin: $pad;
+display: flex;
+padding: 0;
+justify-content: center;
+align-items: center;
 }
+
+button {
+display: block;
+text-decoration: none;
+height: 100px;
+width: 100px;
+border-radius: 50%;
+border: 1px solid yellow;
+}
+
+.dot {
+  animation: 10s infinite;
+  position: relative;
+  animation: myfirst 5s infinite;
+  float: left;
+  -webkit-animation: button 7s ease;
+}
+
+
 
 @for $i from 6 through 1 {
   h#{$i} {
