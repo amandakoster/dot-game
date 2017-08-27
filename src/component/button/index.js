@@ -2,7 +2,7 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './_button.scss';
+
 
 console.log('BUTTON');
 let renderIf = (test, component) => test ? component : undefined;
@@ -27,15 +27,11 @@ class Button extends React.Component{
   render(){
     return(
 
-      <div className="button">
-        <p onClick={this.handleClick}>{this.props.item}</p>
-        {renderIf(this.state.show === true,
-          <button className="button-remove" onClick={() => this.setState({show: false})}>click to delete</button>)}
 
-        <div>
-          <button className="button-increment" onClick={this.IncrementItem}>Click to increment by 1</button>
-          {this.state.show ? <h2>{this.state.clicks}</h2> : '' }
-        </div>
+      <div>
+        <button className="button-increment" onClick={this.IncrementItem}>Click to increment by 1</button>
+        {this.state.show ? <h2>{this.state.clicks}</h2> : '' }
+        
 
         <button className="button-1">button-1</button>
       </div>

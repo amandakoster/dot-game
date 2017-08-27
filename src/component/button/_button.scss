@@ -1,50 +1,46 @@
-// //
-// //
-// // <div className="button-1">1</div>
-// //
-// // </div>
-//
-// // .container {
-// //   width: 100%;
-// // }
-//
-// button {
-// display: block;
-// text-decoration: none;
-// height: 100px;
-// width: 100px;
-// border-radius: 50%;
-// border: 1px solid red;
+// random sizes: https://css-tricks.com/forums/topic/css3-random-number/
+// https://blog.codepen.io/2013/08/26/random-function-in-sass/
+// random()
+// https://codepen.io/amandakoster/pen/JyawpB?editors=0010
+// https://gist.github.com/mkhoeini/b4e09571a70cef017e6d
+
+button {
+display: block;
+text-decoration: none;
+height: 100px;
+width: 100px;
+border-radius: 50%;
+border: 1px solid red;
+}
+
+// .button {
+//   display: inline-block;
+//   padding: 100px;
+//   color: white;
+//   position: relative;
+//   margin: 20px;
+//   border-radius: 50%;
 // }
-//
-// // .button {
-// //   display: inline-block;
-// //   padding: 100px;
-// //   color: white;
-// //   position: relative;
-// //   margin: 20px;
-// //   border-radius: 50%;
-// // }
-//
-// // .button-1 {
-// //   animation: move-in-steps 10s  infinite;
-// // }
-//
-// body {
-//   width: 90%;
+
+// .button-1 {
+//   animation: move-in-steps 10s  infinite;
 // }
-//
-// // @keyframes move-in-steps {
-// //   0% {
-// //     left: 0;
-// //     background: cyan;
-// //   }
-// //   100% {
-// //     left: 100%;
-// //     background: purple;
-// //   }
-// // }
-//
+
+body {
+  width: 90%;
+}
+
+// @keyframes move-in-steps {
+//   0% {
+    // left: 0;
+//     background: cyan;
+//   }
+//   100% {
+//     left: 100%;
+//     background: purple;
+//   }
+// }
+
 // div {
 //     width: 100px;
 //     height: 100px;
@@ -53,11 +49,11 @@
 //     animation: myfirst 5s infinite;
 //     float: left;
 // }
+
+
+// @keyframes myfirst {
 //
+//     10%  {background: yellow;  top: 0px;}
+//     90%  {background: blue; top: 400px;}
 //
-// // @keyframes myfirst {
-// //
-// //     10%  {background: yellow;  top: 0px;}
-// //     90%  {background: blue; top: 400px;}
-// //
-// // }
+// }

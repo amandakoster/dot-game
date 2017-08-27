@@ -1,4 +1,5 @@
-# dot-game
+random:
+https://stanko.github.io/sass-random-and-circle-animation/
 
 # Dot Game
 
