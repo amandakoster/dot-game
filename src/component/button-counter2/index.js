@@ -1,8 +1,10 @@
 // https://toddmotto.com/react-create-class-versus-component/
 // https://codepen.io/ajcbrown820/pen/eZdWaj?editors=0010
+// https://medium.com/@aghh1504/2-increment-and-decrease-number-onclick-react-5767b765103c
 
 
 import React from 'react';
+
 
 var ButtonCounter2 = React.createClass({
   getInitialState: function() {
@@ -10,6 +12,7 @@ var ButtonCounter2 = React.createClass({
       counter: 0,
     };
   },
+
 
   increment: function() {
     this.setState({
@@ -29,6 +32,7 @@ var ButtonCounter2 = React.createClass({
       <button onClick = {this.increment}> ButtonCounter2 Add 1 </button>
       <button onClick = {this.decrement}> ButtonCounter2 Minus 1 </button>
     </div>;
+
   },
 });
 
