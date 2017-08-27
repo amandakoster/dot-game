@@ -24,7 +24,7 @@ class Slider extends React.Component {
 
   render() {
     return (
-      <div className="a">
+      <div className="slider">
         <input
           ref="range"
           type="range"
@@ -66,8 +66,8 @@ class SliderValue extends React.Component {
     this.getStyle();
     return (
       <div className="slider-div">
-        <p className="bar">{ this.percentage } </p>
-        <div style={{ width: this.percentage + '%' }} className= { 'fill '+ this.style }></div>
+        <p className="bar"> { this.percentage } </p>
+        <div style={{ width: this.percentage + '%' }} className= { 'fill'+ this.style }></div>
       </div>
     );
   }
