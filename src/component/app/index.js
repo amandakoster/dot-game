@@ -1,13 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Slider from '../slider';
-import SliderTwo from '../slider-two';
-// import Button from '../button';
-// import '../style/main.scss';
-import '../button-counter2/_button.scss';
-// import ButtonCounter from '../button-counter';
+import '../../style/_base.scss';
 import ButtonCounter2 from '../button-counter2';
-
+import ButtonDelete from '../button-delete';
 
 console.log('HIT APP');
 
@@ -18,6 +14,7 @@ class App extends React.Component{
       <div className='app'>
         <Slider />
         <ButtonCounter2 />
+        <ButtonDelete/>
       </div>
 
     );
