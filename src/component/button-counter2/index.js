@@ -5,8 +5,6 @@
 
 import React from 'react';
 
-
-
 var ButtonCounter2 = React.createClass({
   getInitialState: function() {
     return {
@@ -31,10 +29,10 @@ var ButtonCounter2 = React.createClass({
       <div >{this.state.counter}</div>
       <button
         className='dot fadeInDown'
-        onClick = {this.increment}> ButtonCounter2 Add 1 </button>
+        onClick = {this.increment}> Button + 1 </button>
       <button
         className='dot'
-        onClick = {this.decrement}> ButtonCounter2 Minus 1 </button>
+        onClick = {this.decrement}> Button - 1 </button>
     </div>;
 
   },
