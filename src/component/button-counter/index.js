@@ -8,12 +8,8 @@ class ButtonCounter extends React.Component {
     super(props);
     this.state = {counter: 0};
 
-    this.getInitialState=this.getInitialState.bind(this);
-    this.handleClick=this.handleClick.bind(this);
-  }
 
-  getInitialState() {
-    return { count: 0 };
+    this.handleClick=this.handleClick.bind(this);
   }
 
   handleClick() {
@@ -24,7 +20,8 @@ class ButtonCounter extends React.Component {
   render() {
     return(
       <div className='button-counter'>
-        <p>Hello {this.state.count}!</p>
+
+        <p>ButtonCounter1 {this.state.count}</p>
         <button onClick={this.handleClick}>Increment</button>
       </div>
     );
