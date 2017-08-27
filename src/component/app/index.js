@@ -7,8 +7,6 @@ import Button from '../button';
 import '../button/_button.scss';
 
 
-
-
 console.log('HIT APP');
 
 class App extends React.Component{
@@ -16,8 +14,9 @@ class App extends React.Component{
     return (
 
       <div className='app'>
+        <div id="clicks"></div>
+        
         <Slider />
-
         <Button />
       </div>
 

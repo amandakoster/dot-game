@@ -1,90 +1,63 @@
-.container {
-  width: 100%;
-}
-
-// https://css-tricks.com/snippets/css/keyframe-animation-syntax/
-// https://css-tricks.com/almanac/properties/t/transform/
-// http://easings.net/
-// .ball {
-//   width: 50px;
-//   height: 50px;
-//   background-color: red;
-//   margin: 50px auto 0;
-//   border-radius: 100%;
-//   animation: 0.5s alternate infinite linear;
+// //
+// //
+// // <div className="button-1">1</div>
+// //
+// // </div>
+//
+// // .container {
+// //   width: 100%;
+// // }
+//
+// button {
+// display: block;
+// text-decoration: none;
+// height: 100px;
+// width: 100px;
+// border-radius: 50%;
+// border: 1px solid red;
 // }
 //
-// @keyframes bounce {
-//   0% {
-//     transform: translateY(0);
-//   }
-//   100% {
-//     transform: translateY(200px);
-//   }
+// // .button {
+// //   display: inline-block;
+// //   padding: 100px;
+// //   color: white;
+// //   position: relative;
+// //   margin: 20px;
+// //   border-radius: 50%;
+// // }
+//
+// // .button-1 {
+// //   animation: move-in-steps 10s  infinite;
+// // }
+//
+// body {
+//   width: 90%;
 // }
 //
-// @media (max-width: 40em) {
-// .element {
-// display: none;
+// // @keyframes move-in-steps {
+// //   0% {
+// //     left: 0;
+// //     background: cyan;
+// //   }
+// //   100% {
+// //     left: 100%;
+// //     background: purple;
+// //   }
+// // }
+//
+// div {
+//     width: 100px;
+//     height: 100px;
+//     background: red;
+//     position: relative;
+//     animation: myfirst 5s infinite;
+//     float: left;
 // }
-// }
-
-button {
-display: block;
-text-decoration: none;
-height: 100px;
-width: 100px;
-border-radius: 50%;
-border: 1px solid red;
-}
-
-.move-me {
-  display: inline-block;
-  padding: 30px;
-  color: white;
-  position: relative;
-  margin: 20px;
-  border-radius: 50%;
-}
-.move-me-1 {
-  animation: move-in-steps 10s  infinite;
-}
-.move-me-2 {
-  animation: move-in-steps 6s  infinite;
-}
-.move-me-3 {
-  animation: move-in-steps 8s infinite;
-}
-
-body {
-
-  width: 90%;
-}
-
-@keyframes move-in-steps {
-  0% {
-    left: 0;
-    background: cyan;
-  }
-  100% {
-    left: 100%;
-    background: purple;
-  }
-}
-
-div {
-    width: 100px;
-    height: 100px;
-    background: red;
-    position: relative;
-    animation: myfirst 5s infinite;
-    float: left;
-}
-
-
-@keyframes myfirst {
-
-    10%  {background: yellow;  top: 0px;}
-    90%  {background: blue; top: 400px;}
-
-}
+//
+//
+// // @keyframes myfirst {
+// //
+// //     10%  {background: yellow;  top: 0px;}
+// //     90%  {background: blue; top: 400px;}
+// //
+// // }
