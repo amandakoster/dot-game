@@ -6,6 +6,7 @@ import Button from '../button';
 // import '../style/main.scss';
 import '../button/_button.scss';
 import ButtonCounter from '../button-counter';
+import ButtonCounter2 from '../button-counter2';
 
 
 console.log('HIT APP');
@@ -17,8 +18,8 @@ class App extends React.Component{
       <div className='app'>
         <div className='button-counter'></div>
         <Slider />
-        <Button />
         <ButtonCounter />
+        <ButtonCounter2 />
       </div>
 
     );

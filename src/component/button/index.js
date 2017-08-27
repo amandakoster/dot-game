@@ -16,7 +16,7 @@ class Button extends React.Component{
     super(props);
     this.state = {
       show:true,
-      clicks: 0,
+      count: 0,
     };
     this.handleClick = this.handleClick.bind(this);
   }
@@ -31,7 +31,7 @@ class Button extends React.Component{
       <div>
         <button className="button-increment" onClick={this.IncrementItem}>Click to increment by 1</button>
         {this.state.show ? <h2>{this.state.clicks}</h2> : '' }
-        
+
 
         <button className="button-1">button-1</button>
       </div>
