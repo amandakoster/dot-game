@@ -1,5 +1,7 @@
 @import "./_vars.scss";
 
+// display: flex;
+
 html, body { position: relative; }
 head, script, link  { display: none; }
 p { display: inline-block; }
@@ -8,29 +10,37 @@ em { font-style: italic; }
 strong { font-weight: bold; }
 
 body {
-display: flex;
 padding: 0;
-justify-content: center;
+
 align-items: center;
 }
 
 .button {
-display: block;
 text-decoration: none;
 border-radius: 50%;
 border: 1px solid yellow;
 background: cyan;
 float: left;
-
+margin: 1%;
+display: flex;
 }
 
-.dot {
-  animation: 10s infinite;
-  position: relative;
-  animation: myfirst 5s infinite;
-  float: left;
-  -webkit-animation: button 7s ease;
-}
+.start-button {
+  border: 2px solid #329932;
+  color:#329932;
+  background: white;
+  box-sizing: border-box;
+  width: 4em;
+  }
+
+
+// .dot {
+//   animation: 10s infinite;
+//   position: relative;
+//   animation: myfirst 5s infinite;
+//   float: left;
+//   -webkit-animation: button 7s ease;
+// }
 
 // @for $i from 6 through 1 {
 //   h#{$i} {

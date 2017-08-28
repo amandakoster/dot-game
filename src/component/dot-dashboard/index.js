@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ButtonDelete from '../button-delete';
+import Dot from '../dot';
 
-class ButtonDashboard extends React.Component{
+class DotDashboard extends React.Component{
   constructor(props){
     super(props);
     this.state = {
@@ -19,13 +19,13 @@ class ButtonDashboard extends React.Component{
 
       <div className="buttons">
         <p>{this.state.points}</p>
-        <ButtonDelete id="1" increment={this.increment} />
-        <ButtonDelete id="2" increment={this.increment} />
-        <ButtonDelete id="3" increment={this.increment} />
+        <Dot id="1" increment={this.increment} />
+        <Dot id="2" increment={this.increment} />
+        <Dot id="3" increment={this.increment} />
       </div>
 
     );
   }
 }
 
-export default ButtonDashboard;
+export default DotDashboard;

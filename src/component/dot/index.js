@@ -8,7 +8,7 @@ console.log('BUTTON');
 function getRandomArbitrary(min, max){
   return Math.random() * (max - min) + min;}
 
-class ButtonDelete extends React.Component{
+class Dot extends React.Component{
   constructor(props){
     super(props);
     this.state = {
@@ -41,4 +41,4 @@ class ButtonDelete extends React.Component{
   }
 }
 
-export default ButtonDelete;
+export default Dot;

@@ -2,8 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Slider from '../slider';
 import '../../style/_base.scss';
-import ButtonDelete from '../button-delete';
-import ButtonDashboard from '../button-dashboard';
+import Dot from '../dot';
+import DotDashboard from '../dot-dashboard';
 import StartReset from '../start-reset';
 
 console.log('HIT APP');
@@ -14,7 +14,7 @@ class App extends React.Component{
 
       <div className='app'>
         <Slider />
-        <ButtonDashboard />
+        <DotDashboard />
         <StartReset />
       </div>
 
