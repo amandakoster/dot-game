@@ -32,11 +32,11 @@ float: left;
   -webkit-animation: button 7s ease;
 }
 
-@for $i from 6 through 1 {
-  h#{$i} {
-    font-size: 9/($i + 2) * 1em;;
-  }
-}
+// @for $i from 6 through 1 {
+//   h#{$i} {
+//     font-size: 9/($i + 2) * 1em;;
+//   }
+// }
 
 // label {
 //   font-size: 1.25em;
