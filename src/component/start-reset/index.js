@@ -6,12 +6,16 @@ import TransitionGroup from 'react-addons-transition-group';
 import {TweenMax, Power2, TimelineLite} from 'gsap';
 import './_start-stop.scss';
 
+
 class DotAnimation extends React.Component{
 
   componentWillLeave(callback){
     const el = this.container;
     TweenMax.fromTo(el, 0.9, {y: 0, opacity: 1}, {y: 500, opacity: 1, onComplete: callback});
+
   }
+
+
 
   render() {
     return(
