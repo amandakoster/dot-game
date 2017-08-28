@@ -2,9 +2,23 @@
 // https://codepen.io/Zeaklous/pen/GokAm?editors=0010
 
 import React from 'react';
+import TransitionGroup from 'react-addons-transition-group';
+import {TweenMax, Power2, TimelineLite} from 'gsap';
 import './_start-stop.scss';
 
+class DotAnimation extends React.Component{
 
+  componentWillLeave(callback){
+    const el = this.container;
+    TweenMax.fromTo(el, 0.9, {y: 0, opacity: 1}, {y: 500, opacity: 1, onComplete: callback});
+  }
+
+  render() {
+    return(
+      <div className='dot-sample'ref={c => this.container =c} />
+    );
+  }
+}
 
 class StartReset extends React.Component {
   constructor(props) {
@@ -33,7 +47,9 @@ class StartReset extends React.Component {
     return (
 
       <div className='toggle-animate'>
-        {this.state.showAnimation && <div className='dot-sample' />}
+        <TransitionGroup>
+          {this.state.showAnimation && <DotAnimation />}
+        </TransitionGroup>
 
         <div>
           <button className = 'toggle-button'
