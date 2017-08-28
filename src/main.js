@@ -8,9 +8,7 @@ class AppContainer extends React.Component {
   render() {
     return(
       <div>
-        <MuiThemeProvider>
-          <App />
-        </MuiThemeProvider>
+        <App />
       </div>
     );
   }
