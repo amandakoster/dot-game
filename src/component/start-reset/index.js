@@ -2,6 +2,7 @@
 // https://codepen.io/Zeaklous/pen/GokAm?editors=0010
 
 import React from 'react';
+import './_start-stop.scss';
 
 
 
@@ -10,10 +11,10 @@ class StartReset extends React.Component {
     super(props);
     this.state = {
       isToggleOn: true,
-      dotsAnimate: true,
+      showAnimation: true,
     };
-
     this.handleClick = this.handleClick.bind(this);
+    this.toggleAnimation = this.toggleAnimation.bind(this);
   }
 
   handleClick() {
@@ -22,13 +23,30 @@ class StartReset extends React.Component {
     }));
   }
 
+  toggleAnimation(){
+    this.setState({
+      showAnimation: ! this.state.showAnimation,
+    });
+  }
+
   render() {
     return (
 
-      <button className='start-button'
-        onClick={this.handleClick}>
-        {this.state.isToggleOn ? 'ON' : 'OFF'}
-      </button>
+      <div className='toggle-animate'>
+        {this.state.showAnimation && <div className='dot-sample' />}
+
+        <div>
+          <button className = 'toggle-button'
+            onClick={this.toggleAnimation}>
+          </button>
+        </div>
+
+        <button className='start-button'
+          onClick={this.handleClick}>
+          {this.state.isToggleOn ? 'ON' : 'OFF'}
+        </button>
+      </div>
+
     );
   }
 }

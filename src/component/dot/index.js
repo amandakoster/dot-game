@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-console.log('HIT DOT');
+console.log('BUTTON');
 
 function getRandomArbitrary(min, max){
   return Math.random() * (max - min) + min;}
@@ -10,27 +10,27 @@ class Dot extends React.Component{
   constructor(props){
     super(props);
     this.state = {
-      points: props.increment,
-      size:getRandomArbitrary(10, 100),
+      dotSize: props.increment,
+      randomize:getRandomArbitrary(10, 100),
     };
 
     this.handleClick = this.handleClick.bind(this);
   }
 
   handleClick()
-  {this.state.points(Math.ceil((1 / this.state.size) * 100));
-    this.setState({size:getRandomArbitrary(10, 100)});
-    console.log('hello', 1/this.state.size);
+  {this.state.dotSize(Math.ceil((1 / this.state.randomize) * 100));
+    this.setState({randomize:getRandomArbitrary(10, 100)});
+    console.log('hello', 1/this.state.randomize);
   }
 
   render(){
     let style={
-      height: '' +  this.state.size +'px',
-      width: '' + this.state.size +'px',
+      height: '' +  this.state.randomize +'px',
+      width: '' + this.state.randomize +'px',
     };
 
     return (
-      <div className='button'
+      <div className='dot'
         style={style}
         onClick={this.handleClick}>
       </div>

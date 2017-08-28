@@ -17,7 +17,7 @@ class DotDashboard extends React.Component{
   render(){
     return (
 
-      <div className="buttons">
+      <div className="dot-dashboard">
         <p>{this.state.points}</p>
         <Dot id="1" increment={this.increment} />
         <Dot id="2" increment={this.increment} />
