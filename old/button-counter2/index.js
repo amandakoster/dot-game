@@ -9,6 +9,7 @@ var ButtonCounter2 = React.createClass({
   getInitialState: function() {
     return {
       counter: 0,
+      show:true,
     };
   },
 
@@ -28,12 +29,11 @@ var ButtonCounter2 = React.createClass({
     return <div>
       <div >{this.state.counter}</div>
       <button
-        className='dot fadeInDown'
+
         onClick = {this.increment}> Button + 1 </button>
-      <button
-        className='dot'
-        onClick = {this.decrement}> Button - 1 </button>
     </div>;
+
+
 
   },
 });

@@ -3,30 +3,38 @@ import ReactDOM from 'react-dom';
 
 console.log('BUTTON');
 
-let renderIf = (test, component) => test ? component : undefined;
+
+
+function getRandomArbitrary(min, max){
+  return Math.random() * (max - min) + min;}
 
 class ButtonDelete extends React.Component{
   constructor(props){
     super(props);
-
     this.state = {
-      show:true,
-      value:'10',
+      points: props.increment,
+      size:getRandomArbitrary(10, 100),
     };
 
     this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick(e) {this.setState({show: true});}
+  handleClick()
+  {this.state.points(Math.ceil((1 / this.state.size) * 100));
+    this.setState({size:getRandomArbitrary(10, 100)});
+    console.log('hello', 1/this.state.size);
+  }
 
   render(){
-    return (
+    let style={
+      height: '' +  this.state.size +'px',
+      width: '' + this.state.size +'px',
+    };
 
-      <div className='button'>
-        <p onClick={this.handleClick}>{this.props.item}</p>
-        {renderIf(this.state.show === true,
-          <button className="button-remove" onClick={() => this.setState({show: false})}>Delete Button</button>)}
-        <p>Deleted</p>
+    return (
+      <div className='button'
+        style={style}
+        onClick={this.handleClick}>
       </div>
 
     );
