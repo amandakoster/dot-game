@@ -1,9 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-console.log('BUTTON');
-
-
+console.log('HIT DOT');
 
 function getRandomArbitrary(min, max){
   return Math.random() * (max - min) + min;}

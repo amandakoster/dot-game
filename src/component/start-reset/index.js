@@ -2,21 +2,24 @@
 // https://codepen.io/Zeaklous/pen/GokAm?editors=0010
 
 import React from 'react';
-import ReactRom from 'react-dom';
+
 
 
 class StartReset extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {isToggleOn: true};
+    this.state = {
+      isToggleOn: true,
+      dotsAnimate: true,
+    };
 
     this.handleClick = this.handleClick.bind(this);
   }
 
   handleClick() {
-  	  this.setState(prevState => ({
-  		isToggleOn : !prevState.isToggleOn,
-  	}));
+    this.setState(prevState => ({
+      isToggleOn:!prevState.isToggleOn,
+    }));
   }
 
   render() {
