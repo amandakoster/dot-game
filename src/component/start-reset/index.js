@@ -3,19 +3,16 @@
 
 import React from 'react';
 import TransitionGroup from 'react-addons-transition-group';
-import {TweenMax, Power2, TimelineLite} from 'gsap';
+import {TweenMax, Power2, TimelineLite, TweenLite, TimelineMax} from 'gsap';
 import './_start-stop.scss';
-
 
 class DotAnimation extends React.Component{
 
   componentWillLeave(callback){
     const el = this.container;
-    TweenMax.fromTo(el, 0.9, {y: 0, opacity: 1}, {y: 500, opacity: 1, onComplete: callback});
-
+    const tl = new TimelineMax({repeat: 3});
+    tl.add(TweenMax.fromTo(el, 0.5, {y: 0}, {y: 500, onComplete: callback}));
   }
-
-
 
   render() {
     return(
@@ -56,9 +53,9 @@ class StartReset extends React.Component {
         </TransitionGroup>
 
         <div>
-          <button className = 'toggle-button'
+          <div className = 'toggle-button'
             onClick={this.toggleAnimation}>
-          </button>
+          </div>
         </div>
 
         <button className='start-button'
