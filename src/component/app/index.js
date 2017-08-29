@@ -4,7 +4,8 @@ import Slider from '../slider';
 import '../../style/_base.scss';
 import Dot from '../dot';
 import DotDashboard from '../dot-dashboard';
-import StartReset from '../start-reset';
+import StartPause from '../start-pause';
+import DotAnimation from '../dot-animation';
 
 console.log('HIT APP');
 
@@ -15,7 +16,8 @@ class App extends React.Component{
       <div className='app'>
         <Slider />
         <DotDashboard />
-        <StartReset />
+        <StartPause />
+        <DotAnimation / >
       </div>
 
     );

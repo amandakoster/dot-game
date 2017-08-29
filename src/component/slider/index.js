@@ -1,3 +1,5 @@
+// https://codepen.io/bullerb/pen/gMpxNZ?q=react%20animation&limit=all&order=popularity&depth=everything&show_forks=false
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './_slider.scss';
