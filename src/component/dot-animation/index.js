@@ -2,7 +2,6 @@
 // https://codepen.io/Zeaklous/pen/GokAm?editors=0010
 
 import React from 'react';
-import TransitionGroup from 'react-addons-transition-group';
 import './_dot-animation.scss';
 import Anime from 'react-anime';
 
