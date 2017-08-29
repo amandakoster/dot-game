@@ -91,6 +91,10 @@ animate.css@^3.5.2:
   version "3.5.2"
   resolved "https://registry.yarnpkg.com/animate.css/-/animate.css-3.5.2.tgz#91e668dc069a808e5e499514867b97aae0166c36"
 
+animejs@1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/animejs/-/animejs-1.1.1.tgz#be910a58735b467a52ccd858ea60f02f877bd92e"
+
 ansi-escapes@^1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/ansi-escapes/-/ansi-escapes-1.4.0.tgz#d3a8a83b319aa67793662b13e761c7911422306e"
@@ -4549,6 +4553,12 @@ react-addons-transition-group@^15.6.0:
   resolved "https://registry.yarnpkg.com/react-addons-transition-group/-/react-addons-transition-group-15.6.0.tgz#0f220b9f9597db3a80a88dbd6fe805fc644ce21c"
   dependencies:
     react-transition-group "^1.2.0"
+
+react-anime@^0.3.4:
+  version "0.3.4"
+  resolved "https://registry.yarnpkg.com/react-anime/-/react-anime-0.3.4.tgz#e11c9d0b79b09bbfdc98b5f4a04b6004530ef683"
+  dependencies:
+    animejs "1.1.1"
 
 react-css-themr@^2.1.2:
   version "2.1.2"

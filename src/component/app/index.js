@@ -5,6 +5,7 @@ import '../../style/_base.scss';
 import Dot from '../dot';
 import DotDashboard from '../dot-dashboard';
 import StartReset from '../start-reset';
+import DotAnimation from '../dot-animation';
 
 console.log('HIT APP');
 
@@ -16,6 +17,7 @@ class App extends React.Component{
         <Slider />
         <DotDashboard />
         <StartReset />
+        <DotAnimation / >
       </div>
 
     );
