@@ -22,5 +22,3 @@ class PlayPause3 extends React.Component{
 }
 
 export default PlayPause3;
-
-React.render(<App/>, document.querySelector('#main'));

@@ -7,36 +7,40 @@ import ReactDom from 'react-dom';
 import './_dot-animation.scss';
 import Anime from 'react-anime';
 
-let node = document.getElementById('app');
+var playButton = document.querySelector('.play');
+var pauseButton = document.querySelector('.pause');
+var restartButton = document.querySelector('.restart');
+var progress = document.querySelector('.progress');
 
-let playButton = document.querySelector('.play');
-let pauseButton = document.querySelector('.pause');
-let restartButton = document.querySelector('.restart');
+playButton.addEventListener('click', function() { DotAnimation.play(); });
+pauseButton.addEventListener('click', function() { DotAnimation.pause(); });
+restartButton.addEventListener('click', function() { DotAnimation.restart(); });
+
 
 
 class DotAnimation extends React.Component{
   render(){
     return(
 
-      <div><Anime
-        targets="div"
-        easing="easeInCubic"
-        loop={15}
-        duration={1000}
-        direction="left"
-        delay={(el, index) => index * 240}
-        translateY='13rem'
-        scale={[.9]}>
+      <div>
+        <Anime
+          targets="div"
+          easing="easeInCubic"
+          loop={3}
+          duration={(7000)}
+          direction="left"
+          delay={(el, index) => index * 240}
+          translateY='7rem'>
 
-        <div className="blue"/>
-        <div className="green"/>
-        <div className="red"/>
-        <div className="play"/>
-        <div className="pause"/>
-        <div className="restart"/>
+          <div className="blue"/>
+          <div className="green"/>
+          <div className="red"/>
 
-      </Anime>
+          <button class="play">Play</button>
+          <button class="pause">Pause</button>
+          <button class="restart">Restart</button>
 
+        </Anime>
       </div>
     );
   }
