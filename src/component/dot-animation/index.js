@@ -6,25 +6,6 @@ import React from 'react';
 import ReactDom from 'react-dom';
 import './_dot-animation.scss';
 import Anime from 'react-anime';
-//
-// let button = null;
-// if (isAnimating) {
-//   button = <PlayButton onClick={this.handlePlayButton} />;
-// } else {
-//   button = <PauseButton onClick={this.handlePauseButton} />;
-// }
-//
-// <Anime isAnimating={isAnimating} />
-// {button}
-// </div>
-// var playButton = document.querySelector('.play');
-// var pauseButton = document.querySelector('.pause');
-// var restartButton = document.querySelector('.restart');
-// var progress = document.querySelector('.progress');
-
-// playButton.addEventListener('click', function() { DotAnimation.play(); });
-// pauseButton.addEventListener('click', function() { DotAnimation.pause(); });
-
 
 function PlayButton(props) {
   return (
@@ -61,7 +42,6 @@ class DotAnimation extends React.Component{
   render(){
     const isAnimating=this.state.isAnimating;
 
-
     return(
       <div>
         <Anime
@@ -71,10 +51,6 @@ class DotAnimation extends React.Component{
           duration={(7000)}
           direction="left"
           translateY='7rem'>
-
-          <div className="blue"/>
-          <div className="green"/>
-          <div className="red"/>
         </Anime>
 
         {isAnimating ? (
