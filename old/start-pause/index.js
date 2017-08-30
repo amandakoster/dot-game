@@ -1,7 +1,7 @@
 // https://codepen.io/nwst/pen/oZKjbY?editors=1010
 // https://codepen.io/Zeaklous/pen/GokAm?editors=0010
-// *** https://www.sitepoint.com/animating-the-dom-with-anime-js/
-// *** https://codepen.io/juliangarnier/pen/RRKpgq
+// // *** https://codepen.io/juliangarnier/pen/RRKpgq*** https://www.sitepoint.com/animating-the-dom-with-anime-js/
+
 
 import React from 'react';
 import './_start-pause.scss';
