@@ -6,22 +6,58 @@ import React from 'react';
 import ReactDom from 'react-dom';
 import './_dot-animation.scss';
 import Anime from 'react-anime';
+//
+// var playButton = document.querySelector('.play');
+// var pauseButton = document.querySelector('.pause');
+// var restartButton = document.querySelector('.restart');
+// var progress = document.querySelector('.progress');
 
-var playButton = document.querySelector('.play');
-var pauseButton = document.querySelector('.pause');
-var restartButton = document.querySelector('.restart');
-var progress = document.querySelector('.progress');
-
-playButton.addEventListener('click', function() { DotAnimation.play(); });
-pauseButton.addEventListener('click', function() { DotAnimation.pause(); });
-restartButton.addEventListener('click', function() { DotAnimation.restart(); });
+// playButton.addEventListener('click', function() { DotAnimation.play(); });
+// pauseButton.addEventListener('click', function() { DotAnimation.pause(); });
 
 
+function PlayButton(props) {
+  return (
+    <button onClick={props.onClick}>
+      Play
+    </button>
+  );
+}
+
+function PauseButton(props) {
+  return (
+    <button onClick={props.onClick}>
+      Pause
+    </button>
+  );
+}
 
 class DotAnimation extends React.Component{
-  render(){
-    return(
+  constructor(props){
+    super(props);
+    this.handlePlayButton=this.handlePlayButton.bind(this);
+    this.handlePauseButton=this.handlePauseButton.bind(this);
+    this.state = {isAnimating: false};
+  }
 
+  handlePlayButton() {
+    this.setState({isAnimating: true});
+  }
+
+  handlePauseButton() {
+    this.setState({isAnimating: false});
+  }
+
+  render(){
+    const isAnimating=this.state.isAnimating;
+    let button = null;
+    if (isAnimating) {
+      button = <PlayButton onClick={this.handlePlayButton} />;
+    } else {
+      button = <PauseButton onClick={this.handlePauseButton} />;
+    }
+
+    return(
       <div>
         <Anime
           targets="div"
@@ -29,18 +65,15 @@ class DotAnimation extends React.Component{
           loop={3}
           duration={(7000)}
           direction="left"
-          delay={(el, index) => index * 240}
           translateY='7rem'>
 
           <div className="blue"/>
           <div className="green"/>
           <div className="red"/>
 
-          <button class="play">Play</button>
-          <button class="pause">Pause</button>
-          <button class="restart">Restart</button>
-
         </Anime>
+        <Anime isAnimating={isAnimating} />
+        {button}
       </div>
     );
   }
