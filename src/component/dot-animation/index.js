@@ -7,6 +7,16 @@ import ReactDom from 'react-dom';
 import './_dot-animation.scss';
 import Anime from 'react-anime';
 //
+// let button = null;
+// if (isAnimating) {
+//   button = <PlayButton onClick={this.handlePlayButton} />;
+// } else {
+//   button = <PauseButton onClick={this.handlePauseButton} />;
+// }
+//
+// <Anime isAnimating={isAnimating} />
+// {button}
+// </div>
 // var playButton = document.querySelector('.play');
 // var pauseButton = document.querySelector('.pause');
 // var restartButton = document.querySelector('.restart');
@@ -50,12 +60,7 @@ class DotAnimation extends React.Component{
 
   render(){
     const isAnimating=this.state.isAnimating;
-    let button = null;
-    if (isAnimating) {
-      button = <PlayButton onClick={this.handlePlayButton} />;
-    } else {
-      button = <PauseButton onClick={this.handlePauseButton} />;
-    }
+
 
     return(
       <div>
@@ -70,10 +75,13 @@ class DotAnimation extends React.Component{
           <div className="blue"/>
           <div className="green"/>
           <div className="red"/>
-
         </Anime>
-        <Anime isAnimating={isAnimating} />
-        {button}
+
+        {isAnimating ? (
+          <PauseButton onClick={this.handlePauseButton} />
+        ) : (
+          <PlayButton onClick={this.handlePlayButton} />
+        )}
       </div>
     );
   }
