@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "animate.css": "^3.5.2",
+    "anime": "^0.1.2",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
@@ -29,6 +30,7 @@
     "react-addons-transition-group": "^15.6.0",
     "react-anime": "^0.3.4",
     "react-dom": "^15.6.1",
+    "react-player-controls": "^0.5.17",
     "react-redux": "^5.0.6",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.0",

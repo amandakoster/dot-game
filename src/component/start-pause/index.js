@@ -4,8 +4,6 @@
 // *** https://codepen.io/juliangarnier/pen/RRKpgq
 
 import React from 'react';
-import TransitionGroup from 'react-addons-transition-group';
-import {TweenMax, Power2, TimelineLite, TweenLite, TimelineMax} from 'gsap';
 import './_start-pause.scss';
 
 class StartPause extends React.Component {
