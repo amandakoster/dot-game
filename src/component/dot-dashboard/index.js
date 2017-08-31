@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import Dot from '../dot';
 
 class DotDashboard extends React.Component{
