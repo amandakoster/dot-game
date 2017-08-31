@@ -29,6 +29,7 @@
     "react-anime": "^0.3.4",
     "react-dom": "^15.6.1",
     "react-motion": "^0.5.1",
+    "react-motion-loop": "^2.0.0",
     "react-player-controls": "^0.5.17",
     "react-redux": "^5.0.6",
     "react-router": "^4.2.0",
