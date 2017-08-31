@@ -20,7 +20,7 @@ class Dot extends React.Component{
   handleClick()
   {this.state.dotSize(Math.ceil((1 / this.state.randomize) * 100));
     this.setState({randomize:getRandomArbitrary(10, 100)});
-    console.log('hello', 1/this.state.randomize);
+    console.log('dot', 1/this.state.randomize);
   }
 
   render(){

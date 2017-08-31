@@ -3,37 +3,62 @@
 // https://codepen.io/juliangarnier/pen/vKyLRw?editors=1010
 
 import React from 'react';
-import ReactDom from 'react-dom';
-// import './_dot-animation.scss';
+// import {Motion, spring} from 'react-motion';
 import Anime from 'react-anime';
 
 class DotAnimation extends React.Component{
+  constructor(props){
+    super(props);
+    this.state = {
+      loop: true,
+      isToggleOn: true,
+    };
+    // this.handleMouseDown=this.handleMouseDown.bind(this);
+    // this.handleTouchStart=this.handleTouchStart.bind(this);
+    this.handleClick=this.handleClick.bind(this);
+  }
+
+  // handleMouseDown(){
+  //   this.setState({loop: true});
+  // }
+  //
+  // handleTouchStart(e){
+  //   e.preventDefault();
+  //   this.handleMouseDown({loop: true});
+  // }
+
+  handleClick() {
+    this.setState(prevState => ({
+      isToggleOn: !prevState.isToggleOn,
+    }));
+  }
+
   render(){
     return(
-
       <div>
+        <button
+          onMouseDown={this.handleMouseDown}
+          onTouchStart={this.handleTouchStart}>
+          Toggle
+        </button>
+
+        <button onClick={this.handleClick}>
+          {this.state.loop ? this.istoggleON : this.isToggleOff}
+        </button>
+
         <Anime
           targets="div"
           easing="easeInCubic"
-          loop={3}
-          duration={(7000)}
+          loop={this.state.loop}
+          duration={9000}
           direction="left"
-          delay={(el, index) => index * 240}
-          translateY='7rem'>
+          translateY='7em'>
 
-          <div className="blue"/>
-          <div className="green"/>
-          <div className="red"/>
-
-          <button className="play">Play</button>
-          <button className="pause">Pause</button>
-          <button classname="restart">Restart</button>
 
         </Anime>
       </div>
     );
   }
 }
-
 
 export default DotAnimation;
