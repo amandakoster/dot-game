@@ -1,10 +1,12 @@
 import React from 'react';
+import {Motion, spring} from 'react-motion';
 import ReactDOM from 'react-dom';
-import Slider from '../slider';
-import '../../style/_base.scss';
 import Dot from '../dot';
 import DotDashboard from '../dot-dashboard';
-import DotAnimation from '../dot-animation';
+import ReactMotion from  '../react-motion';
+import Slider from  '../slider';
+
+import '../../style/_base.scss';
 
 console.log('HIT APP');
 
@@ -15,7 +17,9 @@ class App extends React.Component{
       <div className='app'>
         <Slider />
         <DotDashboard />
-        <DotAnimation / >
+        <Motion defaultStyle={{x: 0}} style={{x: spring(10)}}>
+          {value => <div>{value.x}</div>}
+        </Motion>
       </div>
 
     );

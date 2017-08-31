@@ -47,7 +47,7 @@ class DotAnimation extends React.Component{
         <Anime
           targets="div"
           easing="easeInCubic"
-          loop={3}
+  
           duration={(7000)}
           direction="left"
           translateY='7rem'>
