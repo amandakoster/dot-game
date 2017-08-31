@@ -1,7 +1,7 @@
-'use strict'
+'use strict';
 
-const HTMLPlugin = require('html-webpack-plugin')
-const ExtractPlugin = require('extract-text-webpack-plugin')
+const HTMLPlugin = require('html-webpack-plugin');
+const ExtractPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   devtool: 'cheap-module-eval-source-map',
@@ -31,4 +31,4 @@ module.exports = {
       },
     ],
   },
-}
+};
