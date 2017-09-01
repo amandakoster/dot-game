@@ -1,132 +1,53 @@
+// https://codepen.io/nwst/pen/oZKjbY?editors=1010
+// https://codepen.io/Zeaklous/pen/GokAm?editors=0010
+// https://codepen.io/juliangarnier/pen/vKyLRw?editors=1010
+
 import React from 'react';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import {Motion, spring} from 'react-motion';
+import Anime from 'react-anime';
 
-let transitionDivStyle = {
-  'width': '150px',
-  'height': '150px',
-  'padding': '10px',
-  'margin': '25px',
-  'display': 'flex',
-  'justifyContent': 'center',
-  'alignItems': 'center',
-  'cursor': 'pointer',
-  'borderRadius': '5px',
-};
-
-let btnActive = { 'background': '#06FF96' };
-let btnInactive = { 'background': '#FDD692' };
-
-// Root Component:
-class Root extends React.Component {
-  constructor() {
-    super();
+class DotAnimation extends React.Component{
+  constructor(props){
+    super(props);
     this.state = {
-      toggleAll: true,
-      fade: true,
-      slideUp: true,
-      slider: true,
+      loop: true,
+      duration: 7000,
     };
-
-    this.toggleAll = this.toggleAll.bind(this);
-    this.toggleSlideUp = this.toggleSlideUp.bind(this);
-    this.toggleSlider = this.toggleSlider.bind(this);
+    this.handleMouseDown=this.handleMouseDown.bind(this);
+    this.handleTouchStart=this.handleTouchStart.bind(this);
   }
 
-  toggleSlideUp() {
-    if (!this.state.slideUp) {
-      this.setState({
-        slideUp: true,
-      });
-    }
-    else {
-      this.setState({
-        slideUp: false,
-      });
-    }
-  }
-  toggleSlider() {
-    if (!this.state.slider) {
-      this.setState({
-        slider: true,
-      });
-    }
-    else {
-      this.setState({
-        slider: false,
-      });
-    }
+  handleMouseDown(){
+    this.setState({open: !this.state.open});
   }
 
-  render() {
-    return (
+  handleTouchStart(e){
+    e.preventDefault();
+    this.handleMouseDown();
+  }
+
+  render(){
+    return(
       <div>
-        <h1>Dot Animation</h1>
-        <Controller
-          toggleAllBtns = {this.state.toggleAll}
-          slideUp = {this.state.slideUp}
-          slider = {this.state.slider}
-          toggleAll = {this.toggleAll}
-          toggleSlideUp = {this.toggleSlideUp}
-          toggleSlider = {this.toggleSlider} />
 
-        <div className = "transitionsContainer">
-          <SlideUp slideUp = {this.state.slideUp} toggleSlideUp = {this.toggleSlideUp}/>
-          <Slider slider = {this.state.slider} toggleSlider = {this.toggleSlider} />
-        </div>
+        <Anime
+          targets=".dot"
+          easing="easeInCubic"
+          loop={this.props.loop}
+          duration= "7000"
+          direction="left"
+          loop="true"
+          translateY="300">
+
+
+          <div class="line player"> <button class="play">Play</button> <button class="pause">Pause</button> </div>
+
+        document.querySelector('#playPause .play').onclick = playPause.play;
+document.querySelector('#playPause .pause').onclick = playPause.pause;
+        </Anime>
       </div>
     );
   }
 }
 
-class Buttons extends React.Component {
-  render() {
-    let slideUpBtnStyle = btnInactive;
-
-    return (
-      <div className = "controlWrapper">
-        <button style = {this.props.toggleAll} className = "allBtn">button</button>
-        <div className = "controls">
-          <button style = {slideUpBtnStyle} onClick = {this.props.toggleSlideUp}>button</button>
-          <hr />
-        </div>
-      </div>
-    );
-  }
-}
-
-class Controller extends React.Component {
-  render() {
-    let toggleAllText = 'Toggle All On';
-    let toggleAllBtnStyle = btnInactive;
-    if (this.props.toggleAllBtns) {
-      toggleAllBtnStyle = btnActive;
-      toggleAllText = 'Toggle All Off';
-    }
-  }
-}
-
-class SlideUp extends React.Component {
-  render() {
-    let background = {
-      'background': '#f8ca00',
-    };
-    let component;
-    if (this.props.slideUp) {
-      component = (
-        <div style = {Object.assign({}, transitionDivStyle, background)} onClick = {this.props.toggleSlideUp} className = "transitionBox">
-          <p>This div slides up and down</p>
-        </div>
-      );
-    }
-    return (
-      <ReactCSSTransitionGroup
-        transitionName = 'slideUpDiv'
-        transitionEnterTimeout = {800}
-        transitionLeaveTimeout = {800}>
-        {component}
-      </ReactCSSTransitionGroup>
-    );
-  }
-}
-
-export default SlideUp;
+export default DotAnimation;

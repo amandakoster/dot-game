@@ -31,7 +31,9 @@ class Dot extends React.Component{
     };
 
     return (
-      <div className='dot'
+      <div
+        id="infiniteLoop"
+        className="dot"
         style={style}
         onClick={this.handleClick}>
       </div>
