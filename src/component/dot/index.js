@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+
 console.log('HIT DOT');
 
 function getRandomArbitrary(min, max){
