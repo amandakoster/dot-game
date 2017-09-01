@@ -10,8 +10,8 @@ class DotAnimation extends React.Component{
   constructor(props){
     super(props);
     this.state = {
-      loop: false,
-      duration: 3000,
+      loop: true,
+      duration: 7000,
     };
     this.handleMouseDown=this.handleMouseDown.bind(this);
     this.handleTouchStart=this.handleTouchStart.bind(this);
@@ -29,21 +29,21 @@ class DotAnimation extends React.Component{
   render(){
     return(
       <div>
-        <button
-          onMouseDown={this.handleMouseDown}
-          onTouchStart={this.handleTouchStart}>
-          Toggle
-        </button>
 
         <Anime
-          targets="div"
+          targets=".dot"
           easing="easeInCubic"
           loop={this.props.loop}
-          duration={(this.props.duration)}
+          duration= "7000"
           direction="left"
-          translateY='4rem'>
+          loop="true"
+          translateY="300">
 
 
+          <div class="line player"> <button class="play">Play</button> <button class="pause">Pause</button> </div>
+
+        document.querySelector('#playPause .play').onclick = playPause.play;
+document.querySelector('#playPause .pause').onclick = playPause.pause;
         </Anime>
       </div>
     );

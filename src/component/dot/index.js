@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+
 console.log('HIT DOT');
 
 function getRandomArbitrary(min, max){
@@ -30,7 +31,9 @@ class Dot extends React.Component{
     };
 
     return (
-      <div className='dot'
+      <div
+        id="infiniteLoop"
+        className="dot"
         style={style}
         onClick={this.handleClick}>
       </div>
